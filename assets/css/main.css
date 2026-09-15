@@ -1706,3 +1706,58 @@ input, select, textarea {
 		padding: 1rem;
 	}
 }
+
+/* Fix long articles: internal scroll instead of page scrollbar (PC) */
+@media screen and (min-width: 737px) {
+	#main article {
+		width: 46rem;
+		max-height: 72vh;
+		overflow-y: auto;
+		overflow-x: hidden;
+		overscroll-behavior: contain;
+		scrollbar-width: thin;
+		scrollbar-color: rgba(255, 255, 255, 0.35) transparent;
+	}
+
+	#main article::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	#main article::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	#main article::-webkit-scrollbar-thumb {
+		background: rgba(255, 255, 255, 0.25);
+		border-radius: 4px;
+	}
+
+	#main article .image.main img {
+		max-height: 220px;
+		object-fit: cover;
+	}
+
+	#main article .project {
+		margin-bottom: 1.4rem;
+	}
+
+	#main article .project ul {
+		margin-bottom: 0.6rem;
+		font-size: 0.92rem;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	#main article {
+		max-height: 78vh;
+		overflow-y: auto;
+		overflow-x: hidden;
+		overscroll-behavior: contain;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	#main article .image.main img {
+		max-height: 180px;
+		object-fit: cover;
+	}
+}
