@@ -238,25 +238,27 @@
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
+								<form id="contact-form" method="post" action="https://formsubmit.co/ajax/contact.me@alk.helioho.st">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
+											<input type="text" name="name" id="name" required />
 										</div>
 										<div class="field half">
 											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
+											<input type="email" name="email" id="email" required />
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
+											<textarea name="message" id="message" rows="4" required></textarea>
 										</div>
 									</div>
+									<input type="hidden" name="_subject" value="New message from huynguyen.is-a.dev" />
 									<ul class="actions">
 										<li><input type="submit" value="Send Message" class="primary" /></li>
 										<li><input type="reset" value="Reset" /></li>
 									</ul>
+									<p id="form-status" style="display:none;"></p>
 								</form>
 								<ul class="icons">
 									<li><a href="https://www.linkedin.com/in/huy-nguyen-042a283a0/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
@@ -526,6 +528,36 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+			(function () {
+				var form = document.getElementById('contact-form');
+				if (!form) return;
+				var status = document.getElementById('form-status');
+				form.addEventListener('submit', function (e) {
+					e.preventDefault();
+					status.style.display = 'block';
+					status.textContent = 'Sending...';
+					fetch(form.action, {
+						method: 'POST',
+						headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+						body: JSON.stringify({
+							name: document.getElementById('name').value,
+							email: document.getElementById('email').value,
+							message: document.getElementById('message').value,
+							_subject: 'New message from huynguyen.is-a.dev'
+						})
+					}).then(function (res) {
+						if (!res.ok) throw new Error('Request failed');
+						return res.json();
+					}).then(function () {
+						status.textContent = 'Message sent. Thank you — I will reply soon.';
+						form.reset();
+					}).catch(function () {
+						status.textContent = 'Send failed. Please email me directly at contact.me@alk.helioho.st';
+					});
+				});
+			})();
+			</script>
 
 	</body>
 </html>
