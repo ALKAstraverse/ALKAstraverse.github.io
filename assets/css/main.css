@@ -1539,7 +1539,7 @@ input, select, textarea {
 			-webkit-transition: opacity 0.325s ease-in-out, -webkit-transform 0.325s ease-in-out;
 			-ms-transition: opacity 0.325s ease-in-out, -ms-transform 0.325s ease-in-out;
 			transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
-			padding: 4.5rem 2.5rem 1.5rem 2.5rem ;
+			padding: 0 2.5rem 1.5rem 2.5rem ;
 			position: relative;
 			width: 40rem;
 			max-width: 100%;
@@ -1573,8 +1573,8 @@ input, select, textarea {
 			align-items: center;
 			justify-content: space-between;
 			gap: 1rem;
-			margin: -4.5rem -2.5rem 1.5rem -2.5rem;
-			padding: 0.9rem 1.25rem;
+			margin: 0 -2.5rem 1.5rem -2.5rem;
+			padding: 1rem 1.25rem;
 			background: rgba(27, 31, 34, 0.96);
 			border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 			border-radius: 4px 4px 0 0;
@@ -1644,7 +1644,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#main article {
-				padding: 3.5rem 2rem 0.5rem 2rem ;
+				padding: 0 2rem 0.5rem 2rem ;
 			}
 
 				#main article .close:before {
@@ -1656,7 +1656,7 @@ input, select, textarea {
 				}
 
 			#main article .art-bar {
-				margin: -3.5rem -2rem 1rem -2rem;
+				margin: 0 -2rem 1rem -2rem;
 			}
 
 		}
@@ -1664,11 +1664,11 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			#main article {
-				padding: 3rem 1.5rem 0.5rem 1.5rem ;
+				padding: 0 1.5rem 0.5rem 1.5rem ;
 			}
 
 			#main article .art-bar {
-				margin: -3rem -1.5rem 1rem -1.5rem;
+				margin: 0 -1.5rem 1rem -1.5rem;
 			}
 
 		}
