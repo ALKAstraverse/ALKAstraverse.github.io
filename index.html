@@ -32,7 +32,7 @@
 							<ul>
 								<li><a href="#intro">Intro</a></li>
 								<li><a href="#work">Work</a></li>
-								<li><a href="#about">Project</a></li>
+								<li><a href="#about">Projects</a></li>
 								<li><a href="#contact">Contact</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
@@ -73,54 +73,95 @@
 
 						<!-- About -->
 							<article id="about">
-								<h2 class="major">Project</h2>
+								<h2 class="major">Projects</h2>
 								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
 								<!-- Projects Section -->
 <section id="projects">
   <div class="container">
-    <h2>Projects</h2>
 
-    <!-- Project 1 -->
     <div class="project">
-      <h3>HSO Private Server (Java)</h3>
-      <span class="time">2024 – 2025</span>
-      <p>
-        Set up and maintained a private HSO game server using Java. Configured server environment, managed game data, 
-        and optimized performance for multiple concurrent users. Learned in-depth about Java networking, server management, 
-        and resource optimization.
-      </p>
+      <h3>NRO Java Client Port</h3>
+      <span class="time">2022</span>
+      <ul>
+        <li>Ported and maintained a Java-based NRO game client across different runtime environments.</li>
+        <li>Worked with client architecture, networking, game data, resource handling, and compatibility issues.</li>
+        <li>Debugged client-side behavior and modified existing systems to support the target environment.</li>
+      </ul>
     </div>
 
-    <!-- Project 2 -->
     <div class="project">
-      <h3>Flarum Forum Setup</h3>
+      <h3>Web &amp; Linux Fundamentals</h3>
+      <span class="time">2023</span>
+      <ul>
+        <li>Built and maintained small web projects and WordPress websites.</li>
+        <li>Learned practical Linux server administration, web hosting, DNS, SSH, permissions, databases, and basic security.</li>
+        <li>Configured and maintained web services and supporting infrastructure.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>HSO Private Server &amp; Java Backend</h3>
       <span class="time">2024</span>
-      <p>
-        Installed and customized Flarum forum on Debian server. Configured extensions, themes, and user permissions, 
-        and ensured secure, fast, and responsive forum operations. Gained experience in PHP, MySQL, and server security.
-      </p>
+      <ul>
+        <li>Developed and maintained a private HSO game server using Java, working with networking, game protocols, databases, and server-side gameplay systems.</li>
+        <li>Implemented and modified gameplay features, maps, player progression, items, sockets, and server-side logic.</li>
+        <li>Diagnosed networking, memory-management, runtime, and concurrency-related issues.</li>
+        <li>Optimized server performance and infrastructure for multiple concurrent users.</li>
+      </ul>
     </div>
 
-    <!-- Project 3 -->
     <div class="project">
-      <h3>Debian Server & VPS Management</h3>
-      <span class="time">2024 – 2025</span>
-      <p>
-        Managed Debian servers and Google Cloud VMs, including Lighttpd web server, MariaDB databases, 
-        phpMyAdmin, UFW firewall, Cloudflare Tunnel setup, and performance optimization. Developed automation 
-        scripts to streamline server maintenance and monitoring.
-      </p>
+      <h3>Cloud &amp; Self-Hosted Infrastructure</h3>
+      <span class="time">2024 – Present</span>
+      <ul>
+        <li>Designed and operated Linux-based cloud infrastructure across Google Cloud and Oracle Cloud Infrastructure.</li>
+        <li>Deployed containerized services using Docker, with MariaDB, reverse proxies, TLS, Cloudflare DNS/proxying, Cloudflare Tunnel, backups, and monitoring.</li>
+        <li>Managed storage, networking, SSH access, system updates, resource utilization, and service reliability.</li>
+        <li>Automated maintenance and backup workflows using shell scripting and cloud/object storage.</li>
+        <li>Operated ARM64 Ubuntu infrastructure and adapted services for resource-constrained cloud environments.</li>
+      </ul>
     </div>
 
-    <!-- Project 4 -->
     <div class="project">
-      <h3>Personal Web Development Projects</h3>
-      <span class="time">2025</span>
-      <p>
-        Built personal portfolio website, mini web applications (To-Do app, landing pages, interactive gallery), 
-        and deployed on Cloudflare Pages with R2 for media storage. Focused on responsive design, modern 
-        web standards, and user experience.
-      </p>
+      <h3>Flarum &amp; Web Infrastructure</h3>
+      <span class="time">2025 – Present</span>
+      <ul>
+        <li>Deployed, customized, upgraded, and maintained Flarum-based forum infrastructure.</li>
+        <li>Worked with PHP, Composer, MariaDB/MySQL, Docker, reverse proxies, TLS, and Cloudflare.</li>
+        <li>Performed application upgrades, configuration management, backups, troubleshooting, and security hardening.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>Web Applications &amp; Content Platform</h3>
+      <span class="time">2025 – Present</span>
+      <ul>
+        <li>Developed and deployed Node.js-based web applications and a large-scale Vietnamese story/content platform.</li>
+        <li>Built systems using SQLite, Markdown-based content storage, Cloudflare caching, and object-storage backup workflows.</li>
+        <li>Designed storage, caching, deployment, and automation strategies with scalability and infrastructure cost in mind.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>MU ARM64 Port &amp; Reverse Engineering</h3>
+      <span class="time">2026</span>
+      <ul>
+        <li>Ported legacy MU server components from x86 to native ARM64 for deployment on ARM-based cloud infrastructure.</li>
+        <li>Analyzed and debugged native binaries using Ghidra, GDB, and runtime instrumentation.</li>
+        <li>Investigated calling conventions, memory management, socket state, binary interfaces, and client/server communication.</li>
+        <li>Diagnosed and fixed issues involving connection state, allocation/reallocation, double-free behavior, and database-server communication.</li>
+        <li>Maintained compatibility testing between the original x86 implementation and the native ARM64 implementation.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>Linux Security Hardening &amp; CIS Compliance</h3>
+      <span class="time">2026</span>
+      <ul>
+        <li>Hardened Ubuntu/Debian servers using SSH key authentication, Fail2ban, firewall policies, filesystem permissions, kernel/network security parameters, and security auditing.</li>
+        <li>Used OpenSCAP/USG and CIS benchmarks to identify and remediate Linux security configuration issues.</li>
+        <li>Evaluated hardening changes for compatibility with Docker, Cloudflare, SSH, databases, and production services.</li>
+      </ul>
     </div>
 
   </div>
