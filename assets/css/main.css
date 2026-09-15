@@ -1760,6 +1760,21 @@ input, select, textarea {
 	}
 }
 
+/* Intro & Contact are short: natural height, no inner scroll */
+#main article#intro,
+#main article#contact {
+	max-height: none;
+	overflow-y: visible;
+}
+
+#main article#intro .image.main img {
+	max-height: 160px;
+}
+
+#main article#contact .field {
+	margin-bottom: 1rem;
+}
+
 /* Fix long articles: internal scroll instead of page scrollbar (PC) */
 @media screen and (min-width: 737px) {
 	#main article {
