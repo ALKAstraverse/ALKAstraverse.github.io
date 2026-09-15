@@ -1557,21 +1557,60 @@ input, select, textarea {
 			}
 
 			#main article .close {
-				display: block;
-				position: -webkit-sticky;
-				position: sticky;
-				top: 0.5rem;
-				width: 4rem;
-				height: 4rem;
-				margin: 0 -1rem -4rem auto;
-				width: 4rem;
-				height: 4rem;
-				cursor: pointer;
-				text-indent: 4rem;
-				overflow: hidden;
-				white-space: nowrap;
-				z-index: 10;
+				display: none;
 			}
+
+		#main article > h2.major {
+			display: none;
+		}
+
+		#main article .art-bar {
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+			z-index: 20;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 1rem;
+			margin: -4.5rem -2.5rem 1.5rem -2.5rem;
+			padding: 0.9rem 1.25rem;
+			background: rgba(27, 31, 34, 0.96);
+			border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+			border-radius: 4px 4px 0 0;
+		}
+
+			#main article .art-bar .art-title {
+				text-transform: uppercase;
+				letter-spacing: 0.2rem;
+				font-size: 0.8rem;
+				font-weight: 600;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
+			#main article .art-bar .art-close {
+				flex: 0 0 auto;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 2.5rem;
+				height: 2.5rem;
+				border-radius: 100%;
+				border-bottom: 0;
+				color: #ffffff;
+				font-size: 1rem;
+				line-height: 1;
+			}
+
+				#main article .art-bar .art-close:hover {
+					background-color: rgba(255, 255, 255, 0.075);
+				}
+
+				#main article .art-bar .art-close:active {
+					background-color: rgba(255, 255, 255, 0.175);
+				}
 
 				#main article .close:before {
 					-moz-transition: background-color 0.2s ease-in-out;
@@ -1616,12 +1655,20 @@ input, select, textarea {
 					background-size: 14px 14px;
 				}
 
+			#main article .art-bar {
+				margin: -3.5rem -2rem 1rem -2rem;
+			}
+
 		}
 
 		@media screen and (max-width: 480px) {
 
 			#main article {
 				padding: 3rem 1.5rem 0.5rem 1.5rem ;
+			}
+
+			#main article .art-bar {
+				margin: -3rem -1.5rem 1rem -1.5rem;
 			}
 
 		}
