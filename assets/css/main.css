@@ -1760,4 +1760,27 @@ input, select, textarea {
 		max-height: 180px;
 		object-fit: cover;
 	}
+
+	/* Clearer opening animation on mobile (PC unchanged) */
+	#header .logo {
+		transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+	}
+
+	#header .content .inner {
+		transition: max-height 0.9s ease-in-out, padding 0.9s ease-in-out, opacity 0.5s ease-in-out 0.15s;
+	}
+
+	#header nav {
+		transition: opacity 0.55s ease-in-out 0.55s, transform 0.55s ease-in-out 0.55s;
+	}
+
+	body.is-preload #header .logo {
+		opacity: 0;
+		transform: scale(0.85);
+	}
+
+	body.is-preload #header nav {
+		opacity: 0;
+		transform: translateY(1rem);
+	}
 }
