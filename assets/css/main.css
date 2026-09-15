@@ -1673,6 +1673,69 @@ input, select, textarea {
 
 		}
 
+/* Homepage fits viewport height: compact spacing on short screens (PC) */
+@media screen and (min-width: 737px) and (max-height: 820px) {
+	#wrapper {
+		padding: 1.5rem 2rem;
+	}
+
+	#header > * {
+		margin-top: 2rem;
+	}
+
+		#header > *:before {
+			top: calc(-2rem - 1px);
+			height: calc(2rem + 1px);
+		}
+
+	#header .logo {
+		width: 4rem;
+		height: 4rem;
+		line-height: 4rem;
+	}
+
+		#header .logo .icon:before {
+			font-size: 1.6rem;
+		}
+
+	#header .content .inner {
+		padding: 2rem 1.5rem;
+	}
+
+	#footer {
+		margin-top: 1rem;
+	}
+}
+
+@media screen and (min-width: 737px) and (max-height: 700px) {
+	#wrapper {
+		padding: 1rem 2rem;
+	}
+
+	#header > * {
+		margin-top: 1.5rem;
+	}
+
+		#header > *:before {
+			top: calc(-1.5rem - 1px);
+			height: calc(1.5rem + 1px);
+		}
+
+	#header .logo {
+		width: 3.5rem;
+		height: 3.5rem;
+		line-height: 3.5rem;
+	}
+
+	#header .content .inner {
+		padding: 1.5rem 1.25rem;
+	}
+
+	#footer {
+		margin-top: 0.75rem;
+	}
+}
+
 /* Footer */
 
 	#footer {
