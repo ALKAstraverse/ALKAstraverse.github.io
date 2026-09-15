@@ -1852,3 +1852,75 @@ input, select, textarea {
 		transform: translateY(1rem);
 	}
 }
+
+/* Mobile homepage fits viewport: compact header/nav/footer */
+@media screen and (max-width: 736px) {
+	#wrapper {
+		padding: 1.25rem 1rem;
+	}
+
+	#header > * {
+		margin-top: 1.25rem;
+	}
+
+		#header > *:before {
+			top: calc(-1.25rem - 1px);
+			height: calc(1.25rem + 1px);
+		}
+
+	#header .logo {
+		width: 3.5rem;
+		height: 3.5rem;
+		line-height: 3.5rem;
+	}
+
+		#header .logo .icon:before {
+			font-size: 1.4rem;
+		}
+
+	#header .content .inner {
+		padding: 1.5rem 1rem;
+	}
+
+	#header nav ul li a {
+		min-width: 9rem;
+		height: 2.4rem;
+		line-height: 2.4rem;
+		font-size: 0.72rem;
+		padding: 0 1rem;
+	}
+
+	#footer {
+		margin-top: 1rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#wrapper {
+		padding: 0.75rem;
+	}
+
+	#header > * {
+		margin-top: 1rem;
+	}
+
+		#header > *:before {
+			top: calc(-1rem - 1px);
+			height: calc(1rem + 1px);
+		}
+
+	#header .logo {
+		width: 3rem;
+		height: 3rem;
+		line-height: 3rem;
+	}
+
+	#header .content .inner {
+		padding: 1.25rem 0.75rem;
+	}
+
+	#header nav ul li a {
+		height: 2.25rem;
+		line-height: 2.25rem;
+	}
+}
